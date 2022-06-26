@@ -15,7 +15,10 @@ const customJestConfig = {
   moduleDirectories: ['node_modules', '<rootDir>/'],
   // tsconfigで設定しているaliasのパスがある場合、追記しパスを解決する
   moduleNameMapper: {
-    "^@/pages/*":"<rootDir>/pages/$1"
+    "^@/pages/*":"<rootDir>/pages/$1",
+    "^@/config$": "<rootDir>/config",
+    "^@/libs$": "<rootDir>/libs",
+    "^@/provider": "<rootDir>/provider"
   },
   testEnvironment: 'jest-environment-jsdom',
   // 実行するテストファイルおよびディレクトリの指定

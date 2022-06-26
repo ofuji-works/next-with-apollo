@@ -15,14 +15,15 @@ const customJestConfig = {
   moduleDirectories: ['node_modules', '<rootDir>/'],
   // tsconfigで設定しているaliasのパスがある場合、追記しパスを解決する
   moduleNameMapper: {
-    "^@/pages/*":"<rootDir>/pages/$1",
+    "^@/pages/(.*)$":"<rootDir>/pages/$1",
+    "^@/apis$": "<rootDir>/apis",
     "^@/config$": "<rootDir>/config",
     "^@/libs$": "<rootDir>/libs",
-    "^@/provider": "<rootDir>/provider"
+    "^@/provider$": "<rootDir>/provider"
   },
   testEnvironment: 'jest-environment-jsdom',
   // 実行するテストファイルおよびディレクトリの指定
-  testMatch: ['<rootDir>/__tests__/integration/**/*.spec.ts', '<rootDir>/__tests__/integration/**/*.spec.tsx'],
+  testMatch: ['<rootDir>/__tests__/**/*.spec.ts', '<rootDir>/__tests__/**/*.spec.tsx'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

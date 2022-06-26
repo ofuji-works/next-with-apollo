@@ -5,7 +5,8 @@
       "@/pages/*": ["pages/*"],
       "@/config": ["config"],
       "@/libs": ["libs"],
-      "@/provider": ["provider"]
+      "@/provider": ["provider"],
+      "@/apis": ["apis"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

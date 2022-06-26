@@ -5,6 +5,7 @@ import { onError } from '@apollo/client/link/error'
 import { concatPagination } from '@apollo/client/utilities'
 import merge from 'deepmerge'
 import isEqual from 'lodash/isEqual'
+import { fetch } from 'cross-fetch'
 
 /**
  * @summary getStaticProps or getServerSideProps key name
@@ -46,6 +47,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 const httpLink = new HttpLink({
   uri: 'https://graphql.sample.dev/api', // Server URL (must be absolute)
   credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
+  fetch
 })
 
 /**

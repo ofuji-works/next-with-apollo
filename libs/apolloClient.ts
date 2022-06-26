@@ -6,6 +6,7 @@ import { concatPagination } from '@apollo/client/utilities'
 import merge from 'deepmerge'
 import isEqual from 'lodash/isEqual'
 import { fetch } from 'cross-fetch'
+import { API_URL } from '@/config'
 
 /**
  * @summary getStaticProps or getServerSideProps key name
@@ -45,7 +46,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
  * @type {HttpLink}
  */
 const httpLink = new HttpLink({
-  uri: 'https://graphql.sample.dev/api', // Server URL (must be absolute)
+  uri: API_URL, // Server URL (must be absolute)
   credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
   fetch
 })

@@ -1,7 +1,7 @@
-import {NextPage, GetServerSideProps} from 'next'
-import {addApolloState, initializeApollo} from '@/libs'
+import { NextPage, GetServerSideProps } from 'next'
+import { addApolloState, initializeApollo } from '@/libs'
 import { useQuery } from '@apollo/client'
-import {GET_SAMPLE_LIST, SampleList} from '@/apis'
+import { GET_SAMPLE_LIST, SampleList } from '@/apis'
 
 const SsrPage: NextPage = () => {
     const {data, loading} = useQuery(GET_SAMPLE_LIST)

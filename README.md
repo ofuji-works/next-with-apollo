@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## With apollo
+
+https://github.com/vercel/next.js/tree/canary/examples/with-apollo
+
 ## Setting jest
 
 https://nextjs.org/docs/testing#jest-and-react-testing-library
